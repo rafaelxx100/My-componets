@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Projeto My Components</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#">
+                <img src="imagens/foto de perfil.png" alt="eu" class="perfil-img">
+            </a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tipografia.html">Tipografia</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="botoes.html">Botões</a></li>
+                <li><a href="tabelas.html">Tabelas</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+        <h1>My Components</h1>
+
+        <article class="hightlight">
+            <h2>Cards</h2>
+            <p>Cards são elementos usados para agrupar informações como imagens (opcional), título e descrição. Normalmente são links para outras páginas dentro da mesma aplicação ou site. </p>
+        </article>
+
+        <section>
+
+            <div class="row">
+                 <article class="card">
+                    <img src="imagens/fulls/01.jpg" alt="imagem1">
+                    <div class="card_content">
+                        <h3 class="card_title">Criação de cards </h3>
+                        <p>Para mexer com cards sempre é recomendado o uso de &lt;div&gt;, uma div pai vai controlar o conteúdo dentro dela, com uma div pai eu consigo modificar as linhas 
+                            , se vai ter quebra de linha por exemplo, o espaçamento entre elas e assim por diante. Aqui nesse card por exemplo eu utilizei: 
+                        </p>
+                        <pre>
+                            <code>
+&lt;div class="row"&gt;
+    &lt;article class="card"&gt;
+        &lt;img src="imagens/fulls/01.jpg" alt="imagem1"&gt;
+            &lt;div class="card_content"&gt;
+                &lt;h3 class="card_title"&gt;Titulo&lt;/h3&gt;
+                            </code>
+                        </pre>
+                        <p>Depois é só formatar via CSS, lembre que o elemento pai comanda a organização dos elementos filhos. </p>
+                    </div>
+                 </article>
+            </div>
+
+        </section>
+
+        <section>
+            <h3>Display-Flex</h3>
+
+            <p>O display-flex torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens, eles também se tornam em elementos de linha, ou seja, ficam um  
+                ao lado do outro, porem isso pode ser modificado como veremos agora.  </p>
+
+            <div class="row">
+              
+
+                 <article class="card">
+                    <img src="imagens/thumbs/03.jpg" alt="imagem1">
+                    <div class="card_content">
+                        <h3 class="card_title">Flex-direction</h3>
+                        <p>o flex-direction é a propriedade que trabalha junto com o display flex, com ela você consegue organizar a direção em que seus itens serão distribuídos da forma que achar melhor transformando-os em coluna novamente ou como elementos de linha. 
+                            Voce consegue especificar com os comandos <code>flex-direction:row</code> que faz ele ficar em linha como mostra no canto superior esquerdo da imagem acima (para fazer a mesma coisa porém do outro lado se usa o <code>flex-direction:row-reverse</code>), <code>flex-direction:collumn</code> que transforma eles em elementos 
+                            de coluna de cima para baixo como mostra na imagem (para fazer a mesma coisa porém de baixo para cima é só utilizar o <code>flex-direction:collunm-reverse</code>) 
+                        </p>
+                    </div>
+                 </article>
+
+                 <article class="card">
+                    <img src="imagens/thumbs/04.jpg" alt="imagem1">
+                    <div class="card_content">
+                        <h3 class="card_title">Justify-content</h3>
+                        <p>Podemos usar a propriedade justify-content para espaçar nossos itens dentro de um contêiner. Justify-content alinhará os itens ao longo de um eixo. A direção deste eixo é determinada pela propriedade flex-direction (descrita acima). Por exemplo, se a propriedade flex-direction estiver definida como row, então definir justify-content: 
+                            flex-start alinhará os itens a partir do canto superior esquerdo, com todo o espaço extra à direita. Para visualizar isso, pense em todos os itens do contêiner como roupas em um varal. Justify content é a mão mágica que permite deslizar os itens ao longo do varal para espaçá-los uniformemente e garantir uma secagem uniforme.
+                        </p>
+                    </div>
+                 </article>
+
+                 <article class="card">
+                    <img src="imagens/thumbs/05.jpg" alt="imagem1">
+                    <div class="card_content">
+                        <h3 class="card_title">Align-items</h3>
+                        <p>Enquanto justify-content alinha os itens em um eixo principal (geralmente horizontal, como mostrado acima), então align-items alinhará os itens ao longo do eixo cruzado (perpendicular ao eixo Justify content). Por exemplo, por padrão, Justify content alinhará os itens horizontalmente e o align-items alinhará os itens verticalmente.
+                            Frequentemente, você verá a propriedade align-items definida como flex-start, flex-end, center ou stretch, para citar alguns. Semelhante ao Justify content, alinhar itens segue a direção definida pela propriedade flex-direction. Acima temos uma visualização desta propriedade, com base nas configurações padrão (com flex-direction definido como row).
+                        </p>
+                    </div>
+                 </article>
+            </div>
+        </section>
+
+        <section>
+            <h3>Continuacão . . .</h3>
+
+            <div class="row">
+                <article class="card">
+                    <img src="imagens/thumbs/07.jpg" alt="imagem1">
+                    <div class="card_content">
+                        <h3 class="card_title">Flex-wrap</h3>
+                        <p>Por padrão, todos os itens flexíveis tentarão caber em uma linha. Você pode alterar isso e permitir que os itens sejam agrupados conforme necessário com esta propriedade. 
+                            Em palavras mais fáceis, caso os seus itens não couberem todos em uma linha, essa propriedade faz quebrar linha se caso for necessário. 
+                            Essa propriedade tem alguns comandos são eles: <b>nowrap (padrão):</b> todos os itens flexíveis estarão em uma linha, <b>wrap:</b>os itens flexíveis serão agrupados em várias linhas, de cima para baixo caso for necessário e por último <b>wrap-reverse:</b>os itens flexíveis serão agrupados em várias linhas de baixo para cima. 
+                        </p>
+                    </div>
+                 </article>
+    
+                 <article class="card">
+                    <img src="imagens/thumbs/06.jpg" alt="imagem1">
+                    <div class="card_content">
+                        <h3 class="card_title">Flex-Grow</h3>
+                        <p>Isso define a capacidade de um flex-item crescer, se necessário. Aceita um valor sem unidade que serve como proporção. Ele determina a quantidade de espaço disponível dentro do flex container que o item deve ocupar.
+                            Se todos os itens tiverem flex-grow definido como 1, o espaço restante no contêiner será distribuído igualmente para todos os filhos. Se um dos filhos tiver o valor 2, esse filho ocuparia o dobro do espaço de qualquer um dos outros (ou tentará, pelo menos). É interessante de se notar que ele pode ser usado tanto no elemento pai quanto no elemento filho.
+                        </p>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <img src="imagens/thumbs/08.jpg" alt="imagem1">
+                    <div class="card_content">
+                        <h3 class="card_title">Flex-Basis</h3>
+                        <p>Isso define o tamanho padrão de um elemento antes que o espaço restante seja distribuído. Pode ser um comprimento (por exemplo, 20%, 5rem, etc.) ou uma palavra-chave. A palavra-chave auto significa “veja minha propriedade de largura ou altura” (o que foi feito temporariamente pela palavra-chave main-size até ser descontinuada). A palavra-chave content significa “dimensioná-lo com base no conteúdo do item” – esta palavra-chave ainda não é bem suportada, por isso é difícil testar e mais difícil saber o que seus irmãos conteúdo máximo, conteúdo mínimo e conteúdo adequado fazem.
+                            Se definido como 0, o espaço extra ao redor do conteúdo não será levado em consideração. Se definido como automático, o espaço extra será distribuído com base em seu valor de crescimento flexível. Veja no gráfico acima.
+                        </p>
+                    </div>
+                </article>
+    
+                 
+            </div>
+        </section>
+
+        <section>
+            <h3>Flex-shrink</h3>
+
+            <div class="row">
+                   <article class="card">
+                <img src="imagens/thumbs/09.jpg" alt="imagem1">
+                <div class="card_content">
+                    <h3 class="card_title">Flex-shrink</h3>
+                    <p>Isso define a capacidade de um item flexível diminuir, se necessário.
+                    </p>
+                </div>
+            </article>
+            
+            </div>
+            
+        </section>
+
+        <blockquote><i>as informações foram tiradas desse artigo, recomendo dar uma lida e foi traduzido por eu mesmo. </i> 
+            <cite><a href="https://medium.com/@lainakarosic/getting-started-with-css-flexbox-basics-58d875a574ce">https://medium.com/@lainakarosic/getting-started-with-css-flexbox-basics-58d875a574ce</a></cite>
+        </blockquote>
+
+        
+    </main>
+
+</body>
+
+</html>

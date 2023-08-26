@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Projeto My Components</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#">
+                <img src="imagens/foto de perfil.png" alt="eu" class="perfil-img">
+            </a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tipografia.html">Tipografia</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="botoes.html">Botões</a></li>
+                <li><a href="tabelas.html">Tabelas</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+        <h1>My Components</h1>
+
+        <article class="hightlight">
+            <h2>Tipografia</h2>
+            <p>A tipografia transmite nossas definições de tamanhos e espaçamentos e deve ser utilizada respeitando a hierarquia dos elementos na interface. </p>
+        </article>
+
+        <section>
+            <h3>Elementos</h3>
+
+            <article>
+                <h4>Textos</h4>
+                <p>Para utilizar textos em negrito temos duas formas uma delas é utilizando as tags <b> &lt;b&gt;</b>  e a outra é utilizando a tag <strong> &lt;strong&gt;</strong>. A diferença delas é que  
+
+                    a tag b não tem uma importância semântica tão grande quanto a tag Strong, por outro lado a tag Strong quer dizer que esse texto realmente tem importância para o browser.</p> 
+    
+                    <p>Agora para utilizar o <i>itálico</i> é com a tag &lt;i&gt; e para dar uma <em> ênfase a uma frase</em> se usa a tag &lt;em&gt;. Na pratica é a mesma coisa que o strong e o b, a tag &lt;em&lg; tem uma importância 
+    
+                    maior do que a tag &lt;i&gt;.</p> 
+    
+                    <p>Falando agora de textos <U>sublinhados</U>, para realizar esse sublinhamento se utizou da tag &lt;u&gt; oque torna muito parecido com a tag <a href="#"> &lt;a&gt; </a>, porém como já sabemos  
+    
+                    a tag &lt;a&gt; não significa um texto sublinhado e sim um link, então a tag &lt;u&gt; para tal uso não é recomendado além de seu uso semântico estar errado, para sublinhar um texto é mais recomendado 
+    
+                utilizar o CSS com o text-decoration utilizando uma Span ( &lt;span&gt; ) que não possui valor semântico algum. a tag &lt;u&gt; é mais utilizada para mostrar que algo esta escrito errado, <u class="underline">desse jeito</u> em conjunto de um código de CSS ( <code>text-decoration:red wavy underline; </code> ).</p>
+            </article>
+
+            <article>
+                <h4>Sobrescrito e subscrito </h4>
+                <p>3 <sup>2</sup>  é igual à 9. <b> explicação:</b> para utilizar o <sup>2</sup> foi utilizada a tag &lt;sup&gt;, que faz esse efeito muito usado para escrever elementos da tabela periódica ou cálculos matemáticos como no exemplo. 
+
+                    Para fazer algo semelhante temos a tag &lt;sub&gt; que tem o mesmo valor semântico porem ao invés de colocar o número encima coloca em baixo, <b>exemplo H<sub>2</sub>O</b>. </p>
+            </article>
+
+            <article>
+                <h4> Abreviacões</h4>
+
+                <p>Para criar abreviações se utiliza a tag &lt;abbr&gt;, porque ela mostra para o usuário o significado daquela abreviação, <b>exemplo <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn></b>. 
+
+                    para melhorar ainda mais sua semântica é recomendado utilizar a tag &lt;dfn&gt; com um id correspondente e dentro colocar o &lt;abbr&gt; por conta de semanticamente ser mais correto e mais fácil do usuário achar a definição daquela abreviação. O código seria assim: 
+    
+                    <i>&lt;dfn id="html"&gt; &lt;abbr title="HyperText Markup Language"&gt; HTML  &lt;/abbr&gt; &lt;/dfn&gt;</i>. </p>
+            </article>
+
+
+            <article>
+                <h4>Citações </h4>
+
+                <p>Para utilizar citações no seu texto html existe diversas tags, o &lt;blockquote&gt; aonde seria o elemento pai junto com uma <b>&lt;cite&gt;</b> da fonte aonde você tirou essa citação. por exemplo</p> 
+                <blockquote> 
+                    <p>O ruim não é ter trabalho. O ruim é ter que trabalhar</p> 
+                    <cite>Seu Madruga</cite> 
+                </blockquote> 
+                <p>O código desse exemplo foi <i> <b>&lt;blockquote&gt; &lt;p&gt;O ruim não é ter trabalho. O ruim é ter que trabalhar&lt;/p&gt; &lt;cite&gt;Seu Madruga&lt;/cite&gt; &lt;/blockquote&gt; </b></i></p> 
+                <p> Para citações temos também a tag &lt;q&gt;. O elemento &lt;q&gt; indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento &lt;blockquote&gt; . </p> 
+
+            </article> 
+
+            <article>
+                <h4>Outras tags</h4>
+
+                <p>Para utilizar textos pré-formatados se utiliza a tag &lt;pre&gt;, com ela tudo que você modificar no código ela sobe com essa formatação pro browser. Exemplo </p>
+                <pre>
+                    Este texto é um texto pré-formatado
+                </pre>
+                <P>Como vimos no exemplo ele puxa até o espaço que se tem nos códigos na hora do browser subir, se eu quebrasse a linha o browser ia ler com quebra de linha também.</P> 
+                <p>temos também a tag &lt;code&gt; que basicamente diz para o browser que aquilo é um código dando uma formatação diferente, ela é bastante usada junto com o <code>JavaScript</code>. 
+                Um exemplo em que eu possa usar essas tags é justamente para mostrar um código, como no exemplo abaixo: </p> 
+                <pre>
+                    <code>
+                        .main-nav ul a:hover{
+                            background-color: var(--secondary-color-lite) ;
+                            padding-right: 1rem;
+                            transition: all;
+                            transition-duration: .2s;
+                            transition-timing-function: linear;
+                        }
+                    </code>
+                </pre>
+                <p>Basicamente eu abri uma tag &lt;pre&gt; dentro dela abri uma tag &lt;code&gt; e coloquei o código dentro.</p> 
+                <p>Nós também temos a tag &lt;samp&gt;. O elemento  &lt;samp&gt; é usado para incluir texto embutido que representa a saída de amostra (ou citada) de um programa de computador, semelhante a tag &lt;code&gt;. </p> 
+                <p>Para indicar ao usuário para ele apertar alguma tecla se utiliza a tag &lt;kbd&gt;, por exemplo <kbd>CTRL</kbd>  + <kbd>C</kbd>. Obviamente com um pouco de CSS fica mais claro para o usuário ainda, mas semanticamente é assim.  </p>
+            </article>
+
+            <article>
+                <h4>Datas e Horários</h4>
+
+                <p>Para marcar uma data no HTLM se utiliza a tag &lt;time datetime""&gt;, exemplo <time datetime="2001-11-03"> 03 de Novembro de 2001</time>. Visualmente parece que não mudou nada mas semanticamente esta correto assim. 
+                    Para adicionar junto com o horário seria &lt;time datetime"ano-mes-diaThora:minuto:segundo"&gt;. Lembrando que esse horário é sempre baseado no horário local dos estados unidos para colocar com o fuso-horario do Brasil por exemplo 
+                depois do segundo eu coloco -03:00 que seria o fuso-horário aqui do Brasil. </p>
+            </article>
+        </section>
+       
+    </main>
+
+</body>
+
+</html>
