@@ -1,0 +1,2 @@
+# My-componets
+Este é foi o projeto mais daora que eu fiz até agora, basicamente a ideia era fazer uma página aonde eu mostrasse todo meu conhecimento de HTML e CSS que eu desenvolvi até agora, mas eu acabei incrementando algumas coisas, e acabei explicando alguns conceitos mais técnicos aonde eu posso encontrar tudo em um só lugar caso eu precise, ou esqueça de algo, e vocês podem usufruir também
